@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Pulse Aniation</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #222;
+		}
+		.pulse{
+			width: 100px;
+			height: 100px;
+			background-color: #5bea00;
+			color: white;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 100px;
+			font-size: 48px;
+			position: relative;
+		}
+
+		.pulse:before, .pulse:after{
+			content: '';
+			position: absolute;
+			left: -20px;
+			top: -20px;
+			right: -20px;
+			bottom: -20px;
+			border: 1px solid #5bea00;
+			border-radius: 50%;
+			animation: pulsing 1.5s linear infinite;
+		}
+		.pulse:after{
+			animation-delay: 0.75s;
+		}
+
+		@keyframes pulsing{
+			0%{
+				transform: scale(0.5); 
+				opacity: 0;
+			}
+			50%{
+				transform: scale(1); 
+				opacity: 1;
+			}
+			100%{
+				transform: scale(1.2); 
+				sopacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="pulse"><i class="fas fa-phone"></i></div>
+</body>
+</html>

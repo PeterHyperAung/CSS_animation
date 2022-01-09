@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Hover</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        align-items: center;
+        display: flex;
+        font-family: sans-serif;
+        height: 100vh;
+        justify-content: center;
+      }
+      ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+      }
+      ul li {
+        margin: 10px;
+        padding: 0 20px;
+      }
+      ul li a {
+        padding: 10px 0;
+        list-style-type: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #222;
+        position: relative;
+      }
+      ul li a:before {
+        content: "";
+        width: 0;
+        height: 5px;
+        background-color: #00bcd4;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s;
+      }
+      ul li a:after {
+        content: "";
+        width: 0;
+        height: 5px;
+        background-color: #f0f;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: all 0.5s;
+      }
+      ul li a:hover:before {
+        width: 50%;
+        transform: translateX(100%);
+      }
+      ul li a:hover:after {
+        width: 50%;
+        transform: translateX(-100%);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">services</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">contact</a></li>
+    </ul>
+  </body>
+</html>

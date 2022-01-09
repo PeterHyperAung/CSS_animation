@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Animation</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: "Lato", sans-serif;
+			background-color: #272727;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		ul li{
+			list-style: none;
+			color: #484848;
+			font-size: 80px;
+			letter-spacing: 15px;
+			animation: lighting 1.6s linear infinite;
+		}
+		li:nth-child(2){
+			animation-delay: 0.2s;
+		}
+		li:nth-child(3){
+			animation-delay: 0.4s;
+		}
+		li:nth-child(4){
+			animation-delay: 0.6s;
+		}
+		li:nth-child(5){
+			animation-delay: 0.8s;
+		}
+		li:nth-child(6){
+			animation-delay: 1.0s;
+		}
+		li:nth-child(7){
+			animation-delay: 1.2s;
+		}
+		li:nth-child(8){
+			animation-delay: 1.4s;
+		}
+		@keyframes lighting{
+			0%{
+				color: #484848;
+				text-shadow: none;
+			}
+
+			90%{
+				color: #484848;
+				text-shadow: none;
+			}
+			100%{
+				color: #fff900;
+				text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+			}
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>L</li>
+		<li>I</li>
+		<li>G</li>
+		<li>H</li>
+		<li>T</li>
+		<li>I</li>
+		<li>N</li>
+		<li>G</li>
+	</ul>
+</body>
+</html>

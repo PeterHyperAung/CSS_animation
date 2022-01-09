@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Hover</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        align-items: center;
+        background-color: #006266;
+        display: flex;
+        font-family: sans-serif;
+        height: 100vh;
+        justify-content: center;
+      }
+      ul {
+        display: flex;
+      }
+      li {
+        list-style: none;
+        margin: 0 20px;
+        transition: 0.5s;
+      }
+      ul:hover a {
+        filter: blur(5px);
+        opacity: 0.2;
+      }
+      a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        padding: 5px;
+        font-size: 22px;
+        color: white;
+        text-transform: uppercase;
+        transition: all 0.3s;
+      }
+
+      ul a:hover {
+        transform: scale(1.5);
+        opacity: 1;
+        filter: blur(0);
+      }
+      a:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ee5124;
+        transition: 0.3s;
+        transform: scale(0);
+        z-index: -1;
+      }
+      a:hover:before {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">services</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">contact</a></li>
+    </ul>
+  </body>
+</html>

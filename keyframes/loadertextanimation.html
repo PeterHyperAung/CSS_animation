@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loader Text Animation</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #2C3A47;
+			font-family: sans-serif;
+		}
+		h1{
+			font-size: 40px;
+			text-transform: uppercase;
+			letter-spacing: 10px;
+			color: white;
+			position: relative;
+		}
+		h1:before{
+			content: "loading...";
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #f6b93b;
+			width: 100%;
+			overflow: hidden;
+			border-right: 4px solid #f6b93b;
+			animation: animate 2.5s linear infinite alternate;
+		}
+
+		@keyframes animate{
+			0%{
+				width: 0;
+			}
+			100%{
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Loading...</h1>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Driving Animation</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 100vh;
+			overflow: hidden;
+		}
+		.background{
+			height: 100vh;
+			background:  url(bg.jpg);
+			background-position: bottom left;
+		    animation: driving 15s linear infinite;
+		}
+
+		@keyframes driving{
+			from{
+				background-position: bottom left;
+			}
+			to{
+				background-position: bottom right;
+			}
+		}
+
+		.car{
+			position: absolute;
+			left: 300px;
+			bottom: -50px;
+			width: 200px;
+		}
+		.motorbike{
+			position: absolute;
+			left: 700px;
+			bottom: 55px;
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+<div class="background">
+	<img src="car.png" class="car">
+	<img src="motobike.png" class="motorbike">
+</div>
+
+
+</body>
+</html>

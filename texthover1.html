@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Hover</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #444;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Raleway", sans-serif;
+        overflow: hidden;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+      }
+      ul li {
+        list-style: none;
+        color: white;
+        font-size: 100px;
+        font-weight: bold;
+        transition: 2s;
+        margin: 10px;
+      }
+      ul:hover li {
+        transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+        filter: blur(20px);
+      }
+      li:nth-child(2) {
+        transition-delay: 0.4s;
+      }
+      li:nth-child(3) {
+        transition-delay: 0.8s;
+      }
+      li:nth-child(4) {
+        transition-delay: 1.2s;
+      }
+      li:nth-child(5) {
+        transition-delay: 1.6s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>S</li>
+      <li>M</li>
+      <li>O</li>
+      <li>K</li>
+      <li>Y</li>
+    </ul>
+  </body>
+</html>
